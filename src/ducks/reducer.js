@@ -10,7 +10,7 @@ export default function reducer(state = initialState, action) {
   switch (action.type) {
     case INPUT_VALUE:
       console.log(state.greenInput)
-      return Object.assign({}, state, { greenInput: action.payload })
+      return { ...state, greenInput: action.payload }
     default:
       return state
   }
